@@ -3,6 +3,13 @@ enableGitInfo = true
 languageCode = 'en-gb'
 title = 'www.duck.'
 
+[params]
+    SocialAccNameMastodon = "duck"
+    SocialAccHostMastodon = "queer.af"
+    SocialAccNameGithub = "duckfullstop"
+
+    Version = "4.0"
+
 [module]
 [module.hugoVersion]
 min = "0.92.0"

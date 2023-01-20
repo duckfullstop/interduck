@@ -1,7 +1,7 @@
 +++
 title = "Welcome to the new www.duck."
 subtitle = "The new blog starts here."
-date = "20/01/2022 20:00"
+date = "2022-01-20"
 slug = "hello"
 +++
 Who knows, maybe I'll publish some stuff?
