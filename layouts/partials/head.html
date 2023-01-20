@@ -1,0 +1,33 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+    {{ with .Site.Params.favicon }}
+        <link rel="shortcut icon" href="{{ . | absURL }}" type="image/png" />
+    {{ end }}
+    {{ with .Site.Params.description }}
+        <meta name="description" content="{{ . }}" />
+    {{ end }}
+    {{ with .Site.Params.meta.keywords }}
+        <meta name="keywords" content="{{ . }}" />
+    {{ end }}
+
+    <meta name="source-repo" content="https://github.com/duckfullstop/interduck" />
+    <meta name="for-helvetica" content="We all miss you, Gwen. 😢" />
+
+    {{/* Load Bootstrap SCSS. */}}
+    {{ $options := dict "enableSourceMap" true }}
+    {{ if hugo.IsProduction}}
+        {{ $options := dict "enableSourceMap" false "outputStyle" "compressed" }}
+    {{ end }}
+    {{ $styles := resources.Get "scss/main.scss" }}
+    {{ $styles = $styles | resources.ToCSS $options }}
+    {{ if hugo.IsProduction }}
+        {{ $styles = $styles | fingerprint "sha512" }}
+    {{ end }}
+    <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+    
+    <script type="text/javascript" src="/js/manifest.js"></script>
+    <script type="text/javascript" src="/js/vendor.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+</head>

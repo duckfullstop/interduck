@@ -1,0 +1,172 @@
+@import "bootstrap/bootstrap";
+// @import "node_modules/font-awesome/scss/font-awesome";
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400|Raleway:500');
+
+body {
+    color: white;
+    font-family: 'Raleway', Arial, sans-serif;
+    background: #0f2c48;
+    background: -moz-linear-gradient(45deg, #0f2c48 0%, #8be1ff 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#0f2c48), color-stop(100%,#8be1ff));
+    background: -webkit-linear-gradient(45deg, #0f2c48 0%,#8be1ff 100%);
+    background: -o-linear-gradient(45deg, #0f2c48 0%,#8be1ff 100%);
+    background: -ms-linear-gradient(45deg, #0f2c48 0%,#8be1ff 100%);
+    background: linear-gradient(45deg, #0f2c48 0%,#8be1ff 100%);
+    background-attachment: fixed;
+}
+
+@keyframes shadow-in {
+  from {
+    text-shadow: -20px -20px 100px rgba(0, 0, 0, 0);
+  }
+  to {
+    text-shadow: -5px 5px 15px rgba(0, 0, 0, .90);
+  }
+}
+
+.logo {
+  font-family: 'Comfortaa', Arial, sans-serif;
+  font-weight: 400;
+  color: white;
+  &.animate {
+ 
+    -webkit-animation: shadow-in 1s ease-out;
+    -moz-animation: shadow-in 1s ease-out;
+    -o-animation: shadow-in 1s ease-out;
+    animation: shadow-in 1s ease-out;
+  
+    text-shadow: -5px 5px 15px rgba(0, 0, 0, .90);
+  }
+}
+
+a {color:#FFFFFF; text-decoration:bold;}
+
+.buttons {
+    text-decoration:none !important;
+    color: white !important;
+    font-size: 50px;
+    text-shadow:0 0px 2px rgba(0,0,0,.5);
+    .fp-button {
+      margin-right: 20px;
+      display: inline;
+    }
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  /* Font-Awesome recommends -.125em vertical alignment (https://fontawesome.com/how-to-use/on-the-web/advanced/svg-symbols) 
+     However, I mostly find myself using the following which looks better for some icons: */
+  vertical-align: -.140em;
+  fill: currentColor;
+}
+
+.topbar {
+	display: block;
+	width:100vw;
+	height:50px;
+	overflow:hidden;
+	margin:0 auto;
+}
+.toptitle{
+    font-family: 'Comfortaa', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    text-shadow:0 1px 3px rgba(0,0,0,.5);
+    float:left; }
+.toptitle a {
+    text-decoration:none;
+}
+.toptopic{
+    font-family: 'Comfortaa', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 38px;
+    color: white;
+    float:left;
+    margin-left: 20px;
+}
+
+.content_topic {
+}
+
+.portfolio_list {
+    padding: 0 10px;
+    margin: 0 20px;
+    float: left;
+}
+.portfolio_container {
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box {
+    font-family: 'Comfortaa', Arial, sans-serif;
+    text-shadow:0px 0px 15px rgba(0,0,0,.5);
+}
+.footer { font-family: 'Raleway', Arial, sans-serif; position: fixed; bottom: 10px }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+ to {
+    -webkit-transform: rotate(0deg);
+  }
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate {
+ from {
+     -moz-transform: rotate(180deg);
+  }
+  to {
+     -moz-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes rotate {
+ from {
+    -ms-transform: rotate(180deg);
+  }
+  to {
+    -ms-transform: rotateY(360deg);
+  }
+
+}
+.spinning {
+    -webkit-animation: spin 1s linear infinite 0s;
+    -moz-animation: spin 1s linear infinite 0s;
+    -ms-animation: spin 1s linear infinite 0s;
+    animation: 1s spin infinite linear; }
+
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background-size: cover;
+}
+
+.site-wrapper-content {
+  padding-top: 70px;
+}
+
+.fp-alert-body {
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+}
+.fp-alert-data {
+  display: inline;
+  overflow: hidden;
+  white-space: nowrap;
+  a, a:visited {
+    color: #0c5460;
+  }
+  a:hover, a:active {
+    color: #0c7985;
+  }
+}

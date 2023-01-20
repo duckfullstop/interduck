@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row g-lg-5 py-5">
+        <div class="col-lg-12 g-lg-2">
+            <h1 class="display-5 fw-normal logo">blog.<span class="logo animate">duck.</span></h1>
+        </div> 
+    </div>
+    <div class="row">
+        <section id="main">
+            <h1 id="title" class="pb-2 border-bottom">{{ .Title }}</h1>
+            <div>
+                  <article id="content">
+                     {{ .Content }}
+                  </article>
+            </div>
+          </section>
+    </div>
+    <aside id="meta">
+        <div>
+            <section>
+            <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+            <h5 id="wordcount"> {{ .WordCount }} Words </h5>
+            </section>
+        </div>
+        <div>
+            {{ with .PrevInSection }}
+              <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+            {{ end }}
+            {{ with .NextInSection }}
+              <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+            {{ end }}
+        </div>
+    </aside>
+</div>
+{{ end }}

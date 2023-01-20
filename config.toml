@@ -1,3 +1,13 @@
 baseURL = 'https://duck.moe/'
+enableGitInfo = true
 languageCode = 'en-gb'
 title = 'www.duck.'
+
+[module]
+[module.hugoVersion]
+min = "0.92.0"
+
+[[module.imports]]
+path="github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+[[module.imports]]
+path="github.com/hugo-mods/icons"
