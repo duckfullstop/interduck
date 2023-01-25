@@ -2,10 +2,11 @@
 @import "bootstrap/bootstrap";
 // @import "node_modules/font-awesome/scss/font-awesome";
 
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400|Raleway:500');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,900;1,500&display=swap');
 
 body {
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
     background: $brand-color-dark;
     background: -moz-linear-gradient(45deg, $brand-color-dark 0%, $brand-color-light 100%);
     background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,$brand-color-dark), color-stop(100%,$brand-color-light));
@@ -27,7 +28,7 @@ body {
 }
 
 .logo {
-  font-family: 'Comfortaa', Arial, sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   font-weight: 400;
   color: white;
   &.animate {
@@ -55,7 +56,7 @@ body {
 	margin:0 auto;
 }
 .toptitle{
-    font-family: 'Comfortaa', Arial, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-weight: bold;
     font-size: 40px;
     color: white;
@@ -65,7 +66,7 @@ body {
     text-decoration:none;
 }
 .toptopic{
-    font-family: 'Comfortaa', Arial, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-weight: 300;
     font-size: 38px;
     color: white;
@@ -91,10 +92,10 @@ body {
     margin-right: auto;
 }
 .box {
-    font-family: 'Comfortaa', Arial, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     text-shadow:0px 0px 15px rgba(0,0,0,.5);
 }
-.footer { font-family: 'Raleway', Arial, sans-serif; position: fixed; bottom: 10px }
+.footer { font-family: 'Work Sans', sans-serif; position: fixed; bottom: 10px }
 
 @keyframes spin {
   from { transform: rotate(0deg); }
