@@ -1,21 +1,22 @@
+@import "vars.scss";
 @import "bootstrap/bootstrap";
 // @import "node_modules/font-awesome/scss/font-awesome";
 
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400|Raleway:500');
 
 body {
-    color: white;
     font-family: 'Raleway', Arial, sans-serif;
-    background: #0f2c48;
-    background: -moz-linear-gradient(45deg, #0f2c48 0%, #8be1ff 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#0f2c48), color-stop(100%,#8be1ff));
-    background: -webkit-linear-gradient(45deg, #0f2c48 0%,#8be1ff 100%);
-    background: -o-linear-gradient(45deg, #0f2c48 0%,#8be1ff 100%);
-    background: -ms-linear-gradient(45deg, #0f2c48 0%,#8be1ff 100%);
-    background: linear-gradient(45deg, #0f2c48 0%,#8be1ff 100%);
+    background: $brand-color-dark;
+    background: -moz-linear-gradient(45deg, $brand-color-dark 0%, $brand-color-light 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,$brand-color-dark), color-stop(100%,$brand-color-light));
+    background: -webkit-linear-gradient(45deg, $brand-color-dark 0%,$brand-color-light 100%);
+    background: -o-linear-gradient(45deg, $brand-color-dark 0%,$brand-color-light 100%);
+    background: -ms-linear-gradient(45deg, $brand-color-dark 0%,$brand-color-light 100%);
+    background: linear-gradient(45deg, $brand-color-dark 0%,$brand-color-light 100%);
     background-attachment: fixed;
 }
 
+  
 @keyframes shadow-in {
   from {
     text-shadow: -20px -20px 100px rgba(0, 0, 0, 0);
@@ -30,7 +31,6 @@ body {
   font-weight: 400;
   color: white;
   &.animate {
- 
     -webkit-animation: shadow-in 1s ease-out;
     -moz-animation: shadow-in 1s ease-out;
     -o-animation: shadow-in 1s ease-out;
@@ -40,24 +40,9 @@ body {
   }
 }
 
-a {color:#FFFFFF; text-decoration:bold;}
-
-.buttons {
-    text-decoration:none !important;
-    color: white !important;
-    font-size: 50px;
-    text-shadow:0 0px 2px rgba(0,0,0,.5);
-    .fp-button {
-      margin-right: 20px;
-      display: inline;
-    }
-}
-
 .icon {
   width: 1em;
   height: 1em;
-  /* Font-Awesome recommends -.125em vertical alignment (https://fontawesome.com/how-to-use/on-the-web/advanced/svg-symbols) 
-     However, I mostly find myself using the following which looks better for some icons: */
   vertical-align: -.140em;
   fill: currentColor;
 }
@@ -88,7 +73,10 @@ a {color:#FFFFFF; text-decoration:bold;}
     margin-left: 20px;
 }
 
-.content_topic {
+.card-img-top {
+  &.gradient-out {
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0.75) 75%, rgba(0,0,0,0) 100%);
+  }
 }
 
 .portfolio_list {
@@ -141,32 +129,13 @@ a {color:#FFFFFF; text-decoration:bold;}
     -webkit-animation: spin 1s linear infinite 0s;
     -moz-animation: spin 1s linear infinite 0s;
     -ms-animation: spin 1s linear infinite 0s;
-    animation: 1s spin infinite linear; }
-
-video#bgvid {
-position: fixed; right: 0; bottom: 0;
-min-width: 100%; min-height: 100%;
-width: auto; height: auto; z-index: -100;
-background-size: cover;
+    animation: 1s spin infinite linear;
 }
 
-.site-wrapper-content {
-  padding-top: 70px;
-}
-
-.fp-alert-body {
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: left;
-}
-.fp-alert-data {
-  display: inline;
-  overflow: hidden;
-  white-space: nowrap;
-  a, a:visited {
-    color: #0c5460;
-  }
-  a:hover, a:active {
-    color: #0c7985;
+.text-wrap-normal {
+  word-wrap: normal;
+  a {
+    // Don't wrap on links.
+    @extend .text-nowrap;
   }
 }

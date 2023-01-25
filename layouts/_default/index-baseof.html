@@ -3,13 +3,12 @@
     {{- partial "head.html" . -}}
     <body class="h-100 text-bg-dark">
         {{- partial "header.html" . -}}
-        <main>
+        <main class="fronthouse">
             {{- block "main" . }}{{- end }}
         </main>
         <footer class="container-fluid mt-auto">
             {{- partial "footer.html" . -}}
         </footer>
-        
         {{ partial "icon-data" . }}
     </body>
 </html>

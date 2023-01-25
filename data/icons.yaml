@@ -1,3 +1,10 @@
 heart: fas heart
 blog: fas blog
 arrow-right: fas arrow-right
+social-discord: fab discord
+social-github: fab github
+social-mastodon: fab mastodon
+social-twitter: fab twitter
+mail: fas envelope
+portfolio: fas book
+clock: fas clock

@@ -1,20 +1,26 @@
 <h2 class="pb-2 border-bottom">professional.</h2>
-<ul class="list-group">
-    <a href="{{ ref . "portfolio" }}" class="list-group-item list-group-item-action d-flex gap-3 py-2" aria-current="true">
-        <img src="https://github.com/twbs.png" alt="cv" class="rounded-circle flex-shrink-0" width="32" height="32"/>
-        <div class="d-flex gap-2 w-100 justify-content-between">
-            <div>
-                <h4 class="mb-0">Portfolio</h4>
+<div class="card">
+    <ul class="list-group list-group-flush">
+        <a href="{{ ref . "portfolio" }}" class="list-group-item list-group-item-action d-flex gap-3 py-2" aria-current="true">
+            <h2 class="flex-shrink-0 mb-0" width="32" height="32">
+                {{ partial "icon" "portfolio" }}
+            </h2>
+            <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                    <h4 class="mb-0">Portfolio</h4>
+                </div>
             </div>
-        </div>
-    </a>
-    <a href="https://github.com/duckfullstop" class="list-group-item list-group-item-action d-flex gap-3 py-2" aria-current="true">
-        <img src="https://github.com/twbs.png" alt="Github" class="rounded-circle flex-shrink-0" width="32" height="32"/>
-        <div class="d-flex gap-2 w-100 justify-content-between">
-            <div>
-                <small class="d-block mb-0 text-muted">Github</small>
-                <h4 class="mb-0">@duckfullstop</h4>
+        </a>
+        <a rel="me" href="https://github.com/duckfullstop" class="list-group-item list-group-item-action d-flex gap-3 py-2" aria-current="true">
+            <h2 class="flex-shrink-0" width="32" height="32">
+                {{ partial "icon" "social-github" }}
+            </h2>
+            <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                    <small class="d-block mb-0 text-muted">Github</small>
+                    <h4 class="mb-0">@duckfullstop</h4>
+                </div>
             </div>
-        </div>
-    </a>
-</ul>
+        </a>
+    </ul>
+</div>
