@@ -1,7 +1,13 @@
 FROM alpine:3.17 AS build
 
 # We add git to the build stage, because Hugo needs it with --enableGitInfo
-RUN apk add --no-cache hugo git
+RUN apk add --no-cache go git
+
+# The Hugo version
+ARG VERSION=0.110.0
+
+RUN go install -tags extended github.com/gohugoio/hugo@${VERSION}
+RUN hugo version
 
 # The source files are copied to /site
 COPY . /site
