@@ -34,8 +34,8 @@ jobs:
           fi
 
           # Set output parameters.
-          echo ::set-output name=tags::${TAGS}
-          echo ::set-output name=docker_image::${DOCKER_IMAGE}
+          echo "tags=${TAGS}" >> $GITHUB_STATE
+          echo "docker_image=${DOCKER_IMAGE}" >> $GITHUB_STATE
       - name: Set up Buildx
         uses: docker/setup-buildx-action@v2
       - name: Login to GHCI
@@ -48,7 +48,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           builder: ${{ steps.buildx.outputs.name }}
-          context: .
           file: ./Containerfile
           platforms: linux/amd64,linux/arm64,linux/ppc64le
           push: true
