@@ -1,9 +1,21 @@
-FROM --platform=$BUILDPLATFORM alpine:3.17 as build
-RUN apk add --no-cache hugo
-WORKDIR /src
-COPY . .
-RUN --mount=type=cache,target=/tmp/hugo_cache \
-    hugo
+FROM alpine:3.9 AS build
+
+# The Hugo version
+ARG VERSION=0.110.0
+
+ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_Linux-64bit.tar.gz /hugo.tar.gz
+RUN tar -zxvf hugo.tar.gz
+RUN /hugo version
+
+# We add git to the build stage, because Hugo needs it with --enableGitInfo
+RUN apk add --no-cache git
+
+# The source files are copied to /site
+COPY . /site
+WORKDIR /site
+
+# And then we just run Hugo
+RUN /hugo --minify --enableGitInfo
 
 FROM nginxinc/nginx-unprivileged
-COPY --from=build /src/public /usr/share/nginx/html
+COPY --from=build /site/public /usr/share/nginx/html
