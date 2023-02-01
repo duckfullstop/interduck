@@ -6,7 +6,7 @@ RUN apk add --no-cache go git
 # The Hugo version
 ARG VERSION=0.110.0
 
-RUN go install -tags extended github.com/gohugoio/hugo@${VERSION}
+RUN go install -tags extended github.com/gohugoio/hugo@v${VERSION}
 RUN hugo version
 
 # The source files are copied to /site
