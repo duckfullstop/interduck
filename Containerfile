@@ -1,20 +1,11 @@
-FROM alpine:3.17 AS build
+FROM klakegg/hugo:0.107.0-ext AS build
 
-# We add git to the build stage, because Hugo needs it with --enableGitInfo
-RUN apk add --no-cache go git
-
-# The Hugo version
-ARG VERSION=0.110.0
-
-RUN go install -tags extended github.com/gohugoio/hugo@v${VERSION}
-RUN hugo version
-
-# The source files are copied to /site
-COPY . /site
-WORKDIR /site
+# The source files are copied to /src
+COPY . /src
+WORKDIR /src
 
 # And then we just run Hugo
-RUN /hugo --minify --enableGitInfo
+RUN "--minify --enableGitInfo"
 
 FROM nginxinc/nginx-unprivileged
-COPY --from=build /site/public /usr/share/nginx/html
+COPY --from=build /src/public /usr/share/nginx/html
