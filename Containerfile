@@ -1,14 +1,7 @@
-FROM alpine:3.9 AS build
-
-# The Hugo version
-ARG VERSION=0.110.0
-
-ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_Linux-64bit.tar.gz /hugo.tar.gz
-RUN tar -zxvf hugo.tar.gz
-RUN /hugo version
+FROM alpine:3.17 AS build
 
 # We add git to the build stage, because Hugo needs it with --enableGitInfo
-RUN apk add --no-cache git
+RUN apk add --no-cache hugo git
 
 # The source files are copied to /site
 COPY . /site
