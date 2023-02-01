@@ -5,7 +5,8 @@ COPY . /src
 WORKDIR /src
 
 # And then we just run Hugo
-RUN hugo --minify --enableGitInfo
+ARG HUGO_ENV=production
+RUN hugo --minify --enableGitInfo -e ${HUGO_ENV}
 
 FROM nginx:alpine-slim
 COPY --from=build /src/public /usr/share/nginx/html
