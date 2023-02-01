@@ -5,7 +5,7 @@ COPY . /src
 WORKDIR /src
 
 # And then we just run Hugo
-RUN "--minify --enableGitInfo"
+RUN hugo --minify --enableGitInfo
 
 FROM nginxinc/nginx-unprivileged
 COPY --from=build /src/public /usr/share/nginx/html
