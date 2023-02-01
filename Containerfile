@@ -7,5 +7,5 @@ WORKDIR /src
 # And then we just run Hugo
 RUN hugo --minify --enableGitInfo
 
-FROM nginx:latest
+FROM nginx:alpine-slim
 COPY --from=build /src/public /usr/share/nginx/html
