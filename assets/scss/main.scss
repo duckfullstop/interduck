@@ -7,6 +7,9 @@
 body {
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
+    b, strong {
+      font-weight: 600
+    }
     background: $brand-color-dark;
     background: -moz-linear-gradient(45deg, $brand-color-dark 0%, $brand-color-light 100%);
     background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,$brand-color-dark), color-stop(100%,$brand-color-light));

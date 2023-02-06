@@ -1,12 +1,14 @@
 <h2 class="pb-2 border-bottom fw-light">blog.</h2>
 <div class="card text-bg-light">
     <ul class="list-group list-group-flush">
-        {{ range where .Site.RegularPages.ByDate "Type" "blog" | first 3 }}
+        {{ range (where .Site.RegularPages.ByDate "Type" "blog").Reverse | first 3 }}
             <a href="{{.Permalink}}" class="list-group-item list-group-item-action d-flex gap-3 py-2" aria-current="true">
                 <div class="d-flex gap-2 w-100 justify-content-between">
                     <div>
                         <h5 class="mb-0">{{.Title}}</h5>
-                        <p class="mb-0 opacity-75">{{.FuzzyWordCount}} words, {{.ReadingTime}} minute(s) read</p>
+                        <p class="mb-0 opacity-75">{{ partial "icon" "clock" }} {{ .Date.Format "2/1/06" }}</p>
+                        <p class="mb-0 opacity-75">{{ partial "icon" "scroll" }} {{.FuzzyWordCount}} words</p>
+                        <p class="mb-0 opacity-75">{{ partial "icon" "timer" }} {{.ReadingTime}} minute(s) read</p>
                     </div>
                 </div>
             </a>

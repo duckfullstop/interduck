@@ -1,7 +1,7 @@
 +++
 title = "The new www.duck."
 subtitle = "You never know, the blog might get used for something."
-date = "2022-01-20"
+date = "2023-01-20"
 slug = "hello"
 +++
 👋 Hi, and welcome to the fourth major iteration of my landing page - this time, it's got a blog!

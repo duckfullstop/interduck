@@ -1,11 +1,14 @@
 arrow-right: fas arrow-right
+book: fas book
 blog: fas blog
 clock: fas clock
 heart: fas heart
 link: fas link
 mail: fas envelope
 portfolio: fas book
+scroll: fas scroll
 social-discord: fab discord
 social-github: fab github
 social-mastodon: fab mastodon
 social-twitter: fab twitter
+timer: fas timer

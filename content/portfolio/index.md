@@ -1,6 +1,7 @@
 +++
 title = "hello, I'm duck."
 subtitle = "This is what I've done, what I do, and what I want to do next."
+section_title = false
 date = "2022-01-25"
 +++
 

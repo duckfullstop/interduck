@@ -7,8 +7,11 @@ title = 'www.duck.'
     SocialAccNameMastodon = "duck"
     SocialAccHostMastodon = "queer.af"
     SocialAccNameGithub = "duckfullstop"
+    SocialAccNameDiscord = "duck"
+    SocialAccHashDiscord = "0001"
+    SocialAccAddrEmail = "me@duck.moe"
 
-    Version = "4.2023.1"
+    Version = "4.2023.2"
 
 [module]
 [module.hugoVersion]
