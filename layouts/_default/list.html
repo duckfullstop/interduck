@@ -23,7 +23,12 @@
             <a href="{{.Permalink}}" class="list-group-item list-group-item-action d-flex gap-3 py-2">
                 <div class="d-flex gap-2 w-100 justify-content-between">
                     <div>
-                        <h4 class="mb-0">{{.Title}}</h4>
+                        <h4 class="mb-0">
+                            {{ if .Draft }}
+                                <span class="badge rounded-pill text-bg-danger">Draft</span>
+                            {{ end }}
+                            {{.Title}}
+                        </h4>
                         <small class="d-block mb-0 text-muted">{{ partial "icon" "clock" }} {{.Date.Format "2006-01-02"}}</small>
                     </div>
                 </div>

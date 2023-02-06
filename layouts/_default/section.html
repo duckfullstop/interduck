@@ -29,14 +29,41 @@
                     {{ end }}
                 {{ end }}
                 <div class="card-body">
-                    <h3 class="card-title">{{.Title}}</h3>
+                    <h3 class="card-title">
+                        {{ if .Draft }}
+                            <span class="badge rounded-pill text-bg-danger">Draft</span>
+                        {{ end }}
+                        {{.Title}}
+                    </h3>
                     {{ if .Params.Subtitle }}
                         <p class="card-text">{{.Params.Subtitle}}</p>
                     {{ end }}
                     <a href="{{.Permalink}}" class="stretched-link text-decoration-none">{{ partial "icon" "arrow-right" }} Read</a>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">{{ partial "icon" "clock" }} {{.Date.Format "2006-01-02"}}</small>
+                    <div class="hstack gap-2">
+                        {{ if .Draft }}
+                            <div>
+                                <p class="mb-0 text-muted"><span class="badge rounded-pill text-bg-danger">Draft</span></p>
+                            </div>
+                        {{ end }}
+                        <div>
+                            <p class="mb-0 text-muted">{{ partial "icon" "clock" }} {{ .Date.Format "Jan 2, 2006" }}</p>
+                        </div>
+                        <div class="vr"></div>
+                        {{ if ne .Date .Lastmod }}
+                        <div>
+                            <p class="mb-0 text-muted">{{ partial "icon" "edit" }} {{ .Lastmod.Format "Jan 2, 2006" }}</p>
+                        </div>
+                        {{ end }}
+                        <div class="ms-auto">
+                            <p class="mb-0 text-muted">{{ partial "icon" "scroll" }} {{.FuzzyWordCount}} words</p>
+                        </div>
+                        <div class="vr"></div>
+                        <div>
+                            <p class="mb-0 text-muted">{{ partial "icon" "timer" }} {{.ReadingTime}}m</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

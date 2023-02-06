@@ -22,17 +22,42 @@
             <div class="card mb-4 rounded-3 shadow-sm text-bg-light">
                 {{ $img := (.Resources.ByType "image").GetMatch "images/*feature*" }}
                 {{ if $img }}
-                    {{ $img := $img.Fill "1600x600 smart" }}
+                    {{ $img := $img.Fill "2100x900 smart" }}
                     {{ with $img }}
                         <img src="{{ .Permalink }}" class="card-img-top gradient-out" alt="{{ $.Title }}"/>
                     {{ end }}
                 {{ end }}
                 <div class="card-body">
-                    <h1 class="card-title">{{.Title}}</h1>
+                    <h1 class="card-title">
+                        
+                        {{.Title}}
+                    </h1>
                     {{ if .Params.Subtitle }}
                         <p class="card-text">{{.Params.Subtitle}}</p>
                     {{ end }}
-                    <p class="card-text text-muted">{{ partial "icon" "clock" }} {{ .Date.Format "Mon Jan 2, 2006" }}</p>
+                    <div class="hstack gap-2">
+                        {{ if .Draft }}
+                            <div>
+                                <p class="mb-0 text-muted"><span class="badge rounded-pill text-bg-danger">Draft</span></p>
+                            </div>
+                        {{ end }}
+                        <div>
+                            <p class="mb-0 text-muted">{{ partial "icon" "clock" }} {{ .Date.Format "Jan 2, 2006" }}</p>
+                        </div>
+                        <div class="vr"></div>
+                        {{ if ne .Date .Lastmod }}
+                        <div>
+                            <p class="mb-0 text-muted">{{ partial "icon" "edit" }} {{ .Lastmod.Format "Jan 2, 2006" }}</p>
+                        </div>
+                        {{ end }}
+                        <div class="ms-auto">
+                            <p class="mb-0 text-muted">{{ partial "icon" "scroll" }} {{.FuzzyWordCount}} words</p>
+                        </div>
+                        <div class="vr"></div>
+                        <div>
+                            <p class="mb-0 text-muted">{{ partial "icon" "timer" }} {{.ReadingTime}}m</p>
+                        </div>
+                    </div>
                     <hr>
                     <div class="card-text text-wrap-normal">
                         {{.Content}}

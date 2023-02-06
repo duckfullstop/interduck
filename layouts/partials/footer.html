@@ -1,3 +1,6 @@
 <div class="footer text-muted">
+    {{ if not hugo.IsProduction }}
+        <span class="badge rounded-pill text-bg-warning">{{ hugo.Environment }}</span>
+    {{ end }}
     {{.Site.Params.Version}}
 </div>

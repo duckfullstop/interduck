@@ -16,6 +16,10 @@
     <meta name="source-repo" content="https://github.com/duckfullstop/interduck" />
     <meta name="for-helvetica" content="We all miss you, Gwen. 😢" />
 
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+
+
     {{/* Load Bootstrap SCSS. */}}
     {{ $options := dict "enableSourceMap" true }}
     {{ if hugo.IsProduction}}
