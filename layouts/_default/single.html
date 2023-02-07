@@ -44,8 +44,8 @@
                         <div>
                             <p class="mb-0 text-muted">{{ partial "icon" "clock" }} {{ .Date.Format "Jan 2, 2006" }}</p>
                         </div>
-                        <div class="vr"></div>
                         {{ if ne .Date .Lastmod }}
+                        <div class="vr"></div>
                         <div>
                             <p class="mb-0 text-muted">{{ partial "icon" "edit" }} {{ .Lastmod.Format "Jan 2, 2006" }}</p>
                         </div>

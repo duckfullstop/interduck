@@ -1,0 +1,14 @@
+<div class="card mb-3">
+    {{ if .Attributes.filename }}
+        <div class="card-header">
+            <code>
+                <span>{{ partial "icon" "file" }}</span>
+                <span>{{ .Attributes.filename }}</span>
+            </code>
+        </div>
+    {{ end }}
+    
+    <div class="card-body p-0 contains-code">
+        {{ highlight .Inner .Type "style=doom-one" }}
+    </div>
+</div>

@@ -84,6 +84,10 @@ body {
   }
 }
 
+.card-body.contains-code .highlight pre {
+  margin-bottom: 0;
+}
+
 .portfolio_list {
     padding: 0 10px;
     margin: 0 20px;
