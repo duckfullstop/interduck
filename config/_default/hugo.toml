@@ -4,14 +4,17 @@ languageCode = 'en-gb'
 title = 'www.duck.'
 
 [params]
-    SocialAccNameMastodon = "duck"
-    SocialAccHostMastodon = "queer.af"
-    SocialAccNameGithub = "duckfullstop"
-    SocialAccNameDiscord = "duck"
-    SocialAccHashDiscord = "0001"
-    SocialAccAddrEmail = "me@duck.moe"
-
     Version = "4.2023.2"
+
+[social]
+    MastoName = "duck"
+    MastoHost = "queer.af"
+    GithubName = "duckfullstop"
+    DiscordName = "duck"
+    DiscordHash = "0001"
+    Email = "me@duck.moe"
+    MatrixUser = "duck"
+    MatrixServer = "duck.moe"
 
 [module]
 [module.hugoVersion]

@@ -1,0 +1,5 @@
+title = 'DEV www.duck.'
+
+buildDrafts = true
+buildExpired = true
+buildFuture = true

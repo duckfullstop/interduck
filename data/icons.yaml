@@ -2,7 +2,7 @@ arrow-right: fas arrow-right
 book: fas book
 blog: fas blog
 clock: fas clock
-edit: fas pencil
+edit: fas edit
 file: fas file
 heart: fas heart
 link: fas link
@@ -12,5 +12,7 @@ scroll: fas scroll
 social-discord: fab discord
 social-github: fab github
 social-mastodon: fab mastodon
+social-matrix: fas comments
 social-twitter: fab twitter
-timer: fas timer
+social-xmpp: fas comment-dots
+timer: fas stopwatch
