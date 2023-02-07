@@ -41,21 +41,31 @@
                                 <p class="mb-0 text-muted"><span class="badge rounded-pill text-bg-danger">Draft</span></p>
                             </div>
                         {{ end }}
+                        {{ if ge .Date now  }}
+                            <div>
+                                <p class="mb-0 text-muted"><span class="badge rounded-pill text-bg-danger">Not Yet Published</span></p>
+                            </div>
+                        {{ end }}
+                        {{ if ge .ExpiryDate now }}
+                            <div>
+                                <p class="mb-0 text-muted"><span class="badge rounded-pill text-bg-danger">Expired</span></p>
+                            </div>
+                        {{ end }}
                         <div>
-                            <p class="mb-0 text-muted">{{ partial "icon" "clock" }} {{ .Date.Format "Jan 2, 2006" }}</p>
+                            <p class="mb-0 text-muted">{{ partial "icon" "clock" }}{{ .Date.Format "Jan 2, 2006" }}</p>
                         </div>
                         {{ if ne .Date .Lastmod }}
                         <div class="vr"></div>
                         <div>
-                            <p class="mb-0 text-muted">{{ partial "icon" "edit" }} {{ .Lastmod.Format "Jan 2, 2006" }}</p>
+                            <p class="mb-0 text-muted">{{ partial "icon" "edit" }}{{ .Lastmod.Format "Jan 2, 2006" }}</p>
                         </div>
                         {{ end }}
                         <div class="ms-auto">
-                            <p class="mb-0 text-muted">{{ partial "icon" "scroll" }} {{.FuzzyWordCount}} words</p>
+                            <p class="mb-0 text-muted">{{ partial "icon" "scroll" }}{{.FuzzyWordCount}} words</p>
                         </div>
                         <div class="vr"></div>
                         <div>
-                            <p class="mb-0 text-muted">{{ partial "icon" "timer" }} {{.ReadingTime}}m</p>
+                            <p class="mb-0 text-muted">{{ partial "icon" "timer" }}{{.ReadingTime}}m</p>
                         </div>
                     </div>
                     <hr>

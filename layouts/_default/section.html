@@ -42,14 +42,20 @@
                         {{ if .Draft }}
                             <p class="mb-0 text-muted"><span class="badge rounded-pill text-bg-danger">Draft</span></p>
                         {{ end }}
-                        <p class="mb-0 text-muted">{{ partial "icon" "clock" }} {{ .Date.Format "Jan 2, 2006" }}</p>
+                        {{ if ge .Date now  }}
+                            <p class="mb-0 text-muted"><span class="badge rounded-pill text-bg-danger">Not Yet Published</span></p>
+                        {{ end }}
+                        {{ if ge .ExpiryDate now }}
+                            <p class="mb-0 text-muted"><span class="badge rounded-pill text-bg-danger">Expired</span></p>
+                        {{ end }}
+                        <p class="mb-0 text-muted">{{ partial "icon" "clock" }}{{ .Date.Format "Jan 2, 2006" }}</p>
                         {{ if ne .Date .Lastmod }}
                         <div class="vr"></div>
-                        <p class="mb-0 text-muted">{{ partial "icon" "edit" }} {{ .Lastmod.Format "Jan 2, 2006" }}</p>
+                        <p class="mb-0 text-muted">{{ partial "icon" "edit" }}{{ .Lastmod.Format "Jan 2, 2006" }}</p>
                         {{ end }}
-                        <p class="ms-auto mb-0 text-muted">{{ partial "icon" "scroll" }} {{.FuzzyWordCount}} words</p>
+                        <p class="ms-auto mb-0 text-muted">{{ partial "icon" "scroll" }}{{.FuzzyWordCount}} words</p>
                         <div class="vr"></div>
-                        <p class="mb-0 text-muted">{{ partial "icon" "timer" }} {{.ReadingTime}}m</p>
+                        <p class="mb-0 text-muted">{{ partial "icon" "timer" }}{{.ReadingTime}}m</p>
                     </div>
                 </div>
             </div>

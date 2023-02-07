@@ -27,9 +27,15 @@
                             {{ if .Draft }}
                                 <span class="badge rounded-pill text-bg-danger">Draft</span>
                             {{ end }}
+                            {{ if ge .Date now  }}
+                                <span class="badge rounded-pill text-bg-danger">Not Yet Published</span>
+                            {{ end }}
+                            {{ if ge .ExpiryDate now }}
+                                <p class="mb-0 text-muted"><span class="badge rounded-pill text-bg-danger">Expired</span>
+                            {{ end }}
                             {{.Title}}
                         </h4>
-                        <small class="d-block mb-0 text-muted">{{ partial "icon" "clock" }} {{.Date.Format "2006-01-02"}}</small>
+                        <small class="d-block mb-0 text-muted">{{ partial "icon" "clock" }}{{.Date.Format "2006-01-02"}}</small>
                     </div>
                 </div>
             </a>
