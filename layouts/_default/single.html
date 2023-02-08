@@ -19,7 +19,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm text-bg-light">
+            <div class="card border-0 mb-4 rounded-3 shadow-sm text-bg-light">
                 {{ $img := (.Resources.ByType "image").GetMatch "images/*feature*" }}
                 {{ if $img }}
                     {{ $img := $img.Fill "2100x900 smart" }}

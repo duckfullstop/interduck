@@ -20,7 +20,7 @@
     <div class="row row-cols-1 row-cols-xxl-2">
         {{ range .Pages.ByPublishDate.Reverse }}
         <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm text-bg-light">
+            <div class="card border-0 mb-4 rounded-3 shadow-sm text-bg-light">
                 {{ $img := (.Resources.ByType "image").GetMatch "images/*feature*" }}
                 {{ if $img }}
                     {{ $img := $img.Fill "750x225 smart" }}
