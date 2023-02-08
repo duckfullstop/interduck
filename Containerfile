@@ -1,4 +1,4 @@
-FROM klakegg/hugo:0.107.0-ext AS build
+FROM floryn90/hugo:0.110.0-ext AS build
 
 # The source files are copied to /src
 COPY . /src
