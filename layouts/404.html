@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <div class="container">
+        <div class="align-items-center g-lg-5 py-lg-5">
+            <div class="col-lg-12 text-center g-lg-5 py-lg-5 py-2 py-lg-2">
+                <h1 class="display-1 fw-semibold"><span class="logo animate">404</span> :(</h1>
+            </div> 
+        </div>
+        <div class="g-4 py-3">
+            <div class="card border-warning text-bg-dark">
+                <div class="card-header">Not Found</div>
+                <div class="card-body">
+                  <p class="card-text">The thing you were looking for doesn't exist. This makes me very, very sad :(</p>
+                  <a href="{{ "" | relURL }}" class="card-link">Home</a>
+                </div>
+              </div>
+        </div>
+    </div>
+{{ end }}
