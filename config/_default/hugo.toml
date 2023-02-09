@@ -3,8 +3,22 @@ enableGitInfo = true
 languageCode = 'en-gb'
 title = 'www.duck.'
 
+[outputs]
+  home = ['HTML', 'WebAppManifest']
+
 [params]
     Version = "4.2023.2"
+    ThemeColor =  "#1fb4eb"
+    ThemeColorDark = "#052b39"
+
+[[params.favicons]]
+    href = "/favicon.ico"
+    sizes = "32x32"
+    rel = "icon"
+[[params.favicons]]
+    href = "/apple-touch-icon.png"
+    rel = "apple-touch-icon"
+    sizes = "180x180"
 
 [social]
     MastoName = "duck"

@@ -2,9 +2,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
-    {{ with .Site.Params.favicon }}
-        <link rel="shortcut icon" href="{{ . | absURL }}" type="image/png" />
-    {{ end }}
+    {{- partial "head-meta.html" . -}}
     {{ with .Site.Params.description }}
         <meta name="description" content="{{ . }}" />
     {{ end }}

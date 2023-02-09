@@ -1,0 +1,8 @@
+<link rel="icon" type="image/png" href="{{ (partial "functions/get_icon" 32).RelPermalink }}" />
+<link rel="apple-touch-icon" type="image/png" href="{{ (partial "functions/get_icon" 180).RelPermalink }}" />
+{{ with site.Home.OutputFormats.Get "WebAppManifest" }}
+    <link rel="manifest" href="{{ .RelPermalink }}" />
+{{ end }}
+{{ with site.Params.Get "themeColor" }}
+    <meta name="theme-color" content="{{ . }}">
+{{ end }}
