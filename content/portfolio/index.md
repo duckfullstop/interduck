@@ -5,7 +5,10 @@ section_title = false
 date = "2022-01-25"
 +++
 
-_please note: this portfolio is a work in progress, and is in the process of being overhauled. Please reach out to me if you would like my CV in the interim, and pardon the dust!_
+_Please note: This portfolio is a work in progress, and is in the process of being overhauled. Please pardon the dust!_
+
+**You probably just want to grab my CV as a PDF [here.](files/CV.pdf)**
+
 ___
 
 **Hi there!** My name's Andi, but people on the internet call me **duck.** (the full stop is important!).
@@ -33,7 +36,7 @@ Some of the things I worked on included:
 ___
 
 ### theBIGGAME
-#### Production / Head of Streaming | {{<icon "clock">}} 2014-2018
+#### Production / Head of Streaming | {{< icon "clock" >}} 2014-2018
 ##### {{<icon "link">}} [thebiggame.org](https://thebiggame.org)
 
 theBIGGAME is a long running, quarterly LAN Party (gathering of PC Gamers) in the Southampton area. With over 40 events in the past 20 years, it has grown from very small beginnings to a gathering of over 100 participants, continuing to regularly sell-out within weeks of availability and attracting sponsorship from brands including Novatech, Dominos, Plantronics, Tesoro, and i-rocks, among others.
