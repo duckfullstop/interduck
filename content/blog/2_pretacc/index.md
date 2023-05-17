@@ -15,6 +15,8 @@ In particular, **I urge installers of EV charge points to encourage both current
 
 ## How to Upgrade
 
+**The patched firmware version as of writing is v1.6.6.** On some models this varies - see below.
+
 For those managing deployments over OCPP, please either talk to your ABB representative (you should already have been contacted), or patch as you have done for prior releases.
 
 For those using the mobile app - **There are new ChargerSync and TerraConfig mobile apps - you need to switch to the new version to update, and when you do, the old ones will stop working.** These are as follows:
@@ -26,6 +28,14 @@ For those using the mobile app - **There are new ChargerSync and TerraConfig mob
 **iOS:**
 * **[ChargerSync](https://apps.apple.com/gb/app/chargersync/id6443737188)** (for end users)
 * [TerraConfig](https://apps.apple.com/gb/app/terraconfig/id6443887124) (for installers)
+
+Please note: Some model variants of Wallbox use different versioning. The patched version for these is as follows:
+
+* UL40/80A: v1.5.6
+* CE, PTB: v1.5.26
+* CE, Symbiosis: v1.2.8
+
+If you're unsure, you almost definitely need to be targetting v1.6.6.
 
 ## Full Disclosure
 
