@@ -5,7 +5,7 @@ date = "2023-05-17"
 slug = "pretacc"
 +++
 
-ABB, with the assistance of myself, [puck](http://puck.moe/), and another group, are today releasing an urgent [security advisory](https://search.abb.com/library/Download.aspx?Action=Launch&DocumentID=9AKK108468A1415&DocumentPartId=&LanguageCode=en) and adjacent firmware update for all _ABB Terra AC Wallbox_ Electric Vehicle Supply Equipment (EVSE). The vulnerability this refers to is known to affect all _ABB Terra AC Wallboxes_ in circulation up to and including version _v1.6.5_. Affected Wallboxes have serial numbers starting _TACW_, and model numbers starting either _W4-_, _W7-_, _W11-_, or _W22-_.
+ABB, with the assistance of myself, [puck](http://puck.moe/), and an unrelated party, are today releasing an urgent [security advisory](https://search.abb.com/library/Download.aspx?Action=Launch&DocumentID=9AKK108468A1415&DocumentPartId=&LanguageCode=en) and adjacent firmware update for all _ABB Terra AC Wallbox_ Electric Vehicle Supply Equipment (EVSE). The vulnerability this refers to is known to affect all _ABB Terra AC Wallboxes_ in circulation up to and including version _v1.6.5_. Affected Wallboxes have serial numbers starting _TACW_, and model numbers starting either _W4-_, _W7-_, _W11-_, or _W22-_.
 
 An attacker armed with knowledge of this vulnerability is able to connect with administrator privileges (also known as _TerraConfig_) to any Wallbox in Bluetooth range, with no physical access required whatsoever. They can then gain full control over the EVSE, including changing its connected OCPP server, instantiating a free vend, or modifying electrical safety parameters, among other things.
 
