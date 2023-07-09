@@ -8,7 +8,7 @@
             <div class="d-flex gap-2 w-100 justify-content-between">
                 <div>
                     <small class="d-block mb-0 text-muted">Mastodon</small>
-                    <h5 class="mb-0">@{{.Site.Social.mastoname}}@{{.Site.Social.mastohost}}</h5>
+                    <h5 class="mb-0">@{{.Site.Social.mastoname}}<span class="text-muted opacity-50">@{{.Site.Social.mastohost}}</span></h5>
                 </div>
             </div>
         </a>
@@ -34,14 +34,14 @@
                 </div>
             </div>
         </a>
-        <a rel="me" href="https://discord.com/users/{{.Site.Social.discordname}}#{{.Site.Social.discordhash}}" class="list-group-item list-group-item-action d-flex gap-3 py-2" aria-current="true">
+        <a rel="me" href="https://discord.com/users/{{.Site.Social.discordid}}" class="list-group-item list-group-item-action d-flex gap-3 py-2" aria-current="true">
             <h2 class="flex-shrink-0" width="32" height="32">
                 {{ partial "icon" "social-discord" }}
             </h2>
             <div class="d-flex gap-2 w-100 justify-content-between">
                 <div>
                     <small class="d-block mb-0 text-muted">Discord</small>
-                    <h5 class="mb-0">{{.Site.Social.discordname}}<span class="text-muted opacity-50">#{{.Site.Social.discordhash}}</span></h5>
+                    <h5 class="mb-0">@{{.Site.Social.discordname}}</span></h5>
                 </div>
             </div>
         </a>
