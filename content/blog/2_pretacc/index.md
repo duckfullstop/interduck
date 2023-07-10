@@ -2,6 +2,7 @@
 title = "Update your ABB Terra AC Wallbox"
 subtitle = "No, really, it's pretty serious."
 date = "2023-05-17"
+lastmod = "2023-07-10T12:00:00+00:00"
 slug = "pretacc"
 +++
 
@@ -39,7 +40,9 @@ If you're unsure, you almost definitely need to be targetting v1.6.6.
 
 ## Full Disclosure
 
-In the spirit of responsible disclosure, we will be publishing full details of the vulnerability (which we have codenamed **BLUTACC**), alongside a healthily long writeup of how we found it, in the coming weeks once everyone has had opportunity to patch.
+You can find a full write-up on **BLUTACC** [here]({{< ref "/blog/3_blutacc" >}}).
+
+~~In the spirit of responsible disclosure, we will be publishing full details of the vulnerability (which we have codenamed **BLUTACC**), alongside a healthily long writeup of how we found it, in the coming weeks once everyone has had opportunity to patch.~~
 
 **I cannot stress strongly enough that this is seriously urgent for anyone affected** - please take 15 minutes out of your day to get it done as soon as possible.
 
