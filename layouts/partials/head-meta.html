@@ -3,6 +3,6 @@
 {{ with site.Home.OutputFormats.Get "WebAppManifest" }}
     <link rel="manifest" href="{{ .RelPermalink }}" />
 {{ end }}
-{{ with site.Params.Get "themeColor" }}
+{{ with index site.Params "themeColor" }}
     <meta name="theme-color" content="{{ . }}">
 {{ end }}
