@@ -9,6 +9,7 @@ link: fas link
 mail: fas envelope
 portfolio: fas book
 scroll: fas scroll
+social-bluesky: fas feather
 social-discord: fab discord
 social-github: fab github
 social-mastodon: fab mastodon

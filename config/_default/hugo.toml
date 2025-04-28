@@ -3,13 +3,36 @@ enableGitInfo = true
 languageCode = 'en-gb'
 title = 'www.duck.'
 
+[imaging]
+  resampleFilter = 'Lanczos'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+
 [outputs]
   home = ['HTML', 'WebAppManifest']
 
 [params]
-    Version = "4.2023.2"
+    Version = "4.2025.1"
     ThemeColor =  "#1fb4eb"
     ThemeColorDark = "#052b39"
+    [params.social.Bluesky]
+        User = 'duck.moe'
+    [params.social.Mastodon]
+        Name = 'duck'
+        Host = 'social.treehouse.systems'
+    [params.social.Github]
+        Name = 'duckfullstop'
+    [params.social.Discord]
+        Name = 'duckfullstop'
+        ID = '99905036645076992'
+    [params.social.Email]
+        Address = 'me@duck.moe'
+    [params.social.Matrix]
+        User = 'duck'
+        Server = 'duck.moe'
 
 [[params.favicons]]
     href = "/favicon.ico"
@@ -20,19 +43,9 @@ title = 'www.duck.'
     rel = "apple-touch-icon"
     sizes = "180x180"
 
-[social]
-    MastoName = "duck"
-    MastoHost = "queer.af"
-    GithubName = "duckfullstop"
-    DiscordName = "duckfullstop"
-    DiscordId = "99905036645076992"
-    Email = "me@duck.moe"
-    MatrixUser = "duck"
-    MatrixServer = "duck.moe"
-
 [module]
 [module.hugoVersion]
-min = "0.92.0"
+min = "0.142.0"
 
 [[module.imports]]
 path="github.com/gohugoio/hugo-mod-bootstrap-scss/v5"

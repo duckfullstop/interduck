@@ -1,11 +1,13 @@
-FROM floryn90/hugo:0.110.0-ext AS build
+FROM floryn90/hugo:0.142.0-ext-alpine-ci AS build
+
+# Get dart-sass
+RUN apk add --no-cache dart-sass
 
 # The source files are copied to /src
 COPY . /src
 WORKDIR /src
 
 # And then we just run Hugo
-ARG HUGO_ENV=production
 RUN hugo --minify --enableGitInfo -e ${HUGO_ENV}
 
 FROM nginx:alpine-slim

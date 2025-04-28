@@ -14,17 +14,19 @@
     <meta name="source-repo" content="https://github.com/duckfullstop/interduck" />
     <meta name="for-helvetica" content="We all miss you, Gwen. 😢" />
 
+    <link rel="me" href="https://social.treehouse.systems/@moemoeduck"/>
+
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
 
 
     {{/* Load Bootstrap SCSS. */}}
-    {{ $options := dict "enableSourceMap" true }}
-    {{ if hugo.IsProduction}}
-        {{ $options := dict "enableSourceMap" false "outputStyle" "compressed" }}
-    {{ end }}
+    {{ $options := dict 
+        "enableSourceMap" true
+        "outputStyle" (cond hugo.IsProduction "compressed" "expanded")
+    }}
     {{ $styles := resources.Get "scss/main.scss" }}
-    {{ $styles = $styles | resources.ToCSS $options }}
+    {{ $styles = $styles | css.Sass $options }}
     {{ if hugo.IsProduction }}
         {{ $styles = $styles | fingerprint "sha512" }}
     {{ end }}
