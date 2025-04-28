@@ -1,6 +1,6 @@
 FROM ghcr.io/hugomods/hugo:dart-sass-go-git-0.142.0 AS build
 
-ARG HUGO_ENV=PRODUCTION
+ARG HUGO_ENV=production
 ENV HUGO_ENV=${HUGO_ENV}
 
 # The source files are copied to /src
