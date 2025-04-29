@@ -1,7 +1,7 @@
 +++
 title = "A decade of Flower"
 subtitle = "Thoughts on 10 years of The Other Network."
-date = "2025-04-30T00:00:00+00:00"
+date = "2025-04-30T00:00:00+01:00"
 slug = "flower_10"
 section_title = "I miss Gwen."
 +++
